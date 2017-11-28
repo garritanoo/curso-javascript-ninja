@@ -23,8 +23,8 @@ Crie uma função que adicione um valor à variável criada acima, e retorne a s
 Onde VALOR é o novo valor da variável.
 */
 function adicionaValor() {
-var qualquer = 'valor';
-return qualquer;
+var qualquer = 50;
+return 'O valor da variável agora é ' + qualquer;
 }
 
 // Invoque a função criada acima.
@@ -32,7 +32,7 @@ adicionaValor();
 
 // Qual o retorno da função? (Use comentários de bloco).
 /*A função retornou
-a string 'valor';
+a string O valor da variável agora é 50;
 */ 
 
 /*
@@ -43,7 +43,12 @@ Crie uma função com as seguintes características:
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
 function tresArg(x, y, z) {
-return x * y * z + || 'Preencha todos os valores corretamente';
+    if( x === undefined || y === undefined || z === undefined){
+        return 'Preencha todos os valores corretamente';
+    } else {
+        return x * y * z + 2;
+    }
+}
 
 // Invoque a função criada acima, passando só dois números como argumento.
 tresArg(10,50);
@@ -67,26 +72,25 @@ Crie uma função com as seguintes características:
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
 function tresNumeros(x, y, z){
-... if(x || y || z){
-..... return x || y || z;
-..... } else if(x && y || x && z || y && z{
-....... return x + y || x + z || y + z;
-....... }else if (x && y && z){
-....... return x + y / z;
-....... }else if (x === 0 || y === 0 || z === 0){
-....... return false;
-....... } else {
-....... return null;
-....... }
-..... }
-
+	if (x !== undefined && y === undefined && z === undefined) {
+		return x;
+	} else if (x !== undefined && y !== undefined && z === undefined) {
+		return x + y;
+	} else if (x !== undefined && y !== undefined && z !== undefined) {
+		return (x + y) / z;
+	} else if (x === undefined && y === undefined && z === undefined) {
+		return false;
+	} else {
+		return null;
+	}
+}
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
 /*
-Nenhum argumento = Erro.
-Um argumento = Erro.
-Dois argumentos = Erro.
-Três argumentos = Erro.
+tresNumeros() //false
+tresNumeros(1) //1
+tresNumeros(1,2) //2
+tresNumeros(1,2,3) //1
 */
 
 ```
