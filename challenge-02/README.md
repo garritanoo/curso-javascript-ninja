@@ -24,7 +24,7 @@ Onde VALOR é o novo valor da variável.
 */
 function adicionaValor() {
 var qualquer = 'valor';
-retunr qualquer;
+return qualquer;
 }
 
 // Invoque a função criada acima.
