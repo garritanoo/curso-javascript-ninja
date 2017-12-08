@@ -30,7 +30,7 @@ Crie uma função literal chamada `showName`. Essa função deve retornar o
 seu nome.
 */
 function showName() {
-	return 'Juarez Garritano;	
+	return 'Juarez Garritano';	
 }
 
 /*
