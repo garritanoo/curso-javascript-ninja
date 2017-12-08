@@ -12,7 +12,12 @@ Invoque a função criada acima, passando dois números que serão somados, e mo
 o resultado no console, com a frase:
 "A soma de [VALOR 1] e [VALOR2] é igual a [RESULTADO]."
 */
-console.log('A soma de ' + sum(0,6) + ' e ' + sum(6,0) + ' é igual a ' + sum(6,6));
+// console.log('A soma de ' + sum(0,6) + ' e ' + sum(6,0) + ' é igual a ' + sum(6,6));
+
+var value1 = 10;
+var value2 = 20;
+
+console.log('A soma de ' + value1 + ' é ' + value2 + ' é igaul a ' + sum(value1, value2) + '.');
 
 /*
 Mostre no console o nome da função criada acima, com a frase:
