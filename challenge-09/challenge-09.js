@@ -22,30 +22,29 @@ myFunction();
     myFunction2();
 */
 function myFunction2() {
-    console.log( 'A soma de 10 e 20 é igual a', sum ? sum() : undefined );
-    var sum = function sum() {
-        return number1 + number2;
-    };
-    var number1 = 10;
-    var number2 = 20;
-    return sum();
-}
-myFunction2();
+	var number1 = 10;
+	var number2 = 20;
+     var sum = function sum() {
+         return number1 + number2;
+     };
+     console.log( 'A soma de 10 e 20 é igual a', sum ? sum() : undefined );
+ }
+ myFunction2();
 
 /*
     myFunction3();
 */
-function myFunction3() {
-    console.log( 'A soma de 40 e 50 é igual a', sum() );
-    var number2 = 50;
-    console.log( 'Na função myFunction3, number1 é igual a', number1 );
-    var number1 = 40;
-    return sum();
-    function sum() {
-        return number1 + number2;
-    };
-}
-myFunction3();
+ function myFunction3() {
+     function sum() {
+ 	    return number1 + number2;
+     };
+	var number1 = 40;
+	var number2 = 50;
+	console.log( 'Na função myFunction3, number1 é igual a', number1 );
+     console.log( 'A soma de 40 e 50 é igual a', sum() );
+     return sum();
+ }
+ myFunction3();
 
 /*
 No desafio anterior criamos uma calculadora, usando uma estrutura funcional.
@@ -60,13 +59,17 @@ o retorno de `calculator`.
 por parâmetro, INVOCADA, e passando a ela por parâmetro os dois valores
 que foram passadas para a primeira função `calculator`.
 */
-// ?
+	function calculator(num1, num2) {
+		return function (callback) {
+			return callback(num1, num2);
+		};
+	}
 
 /*
 Declare uma variável chamada `sum`, e atribua a ela a função `calculator`,
 passando dois números por parâmetro.
 */
-// ?
+var sum calculator(10, 2);
 
 /*
 Sabemos que `sum` agora tem uma função atribuída a ela, que é o retorno de
@@ -77,15 +80,21 @@ para a chamada à `calculator` acima.
 uma função anônima que irá retornar a soma dos dois números que essa função
 anônima tem como seus argumentos.
 */
-console.log( 'O resultado da soma é:' );
-// ?
+	console.log('O resultado da soma é:');
+	console.log(sum(function(number1, number2){
+		return number1 + number2;
+	}));
 
 /*
 Agora declare outra variáveis chamadas `subtraction`, `multiplication`,
 `division` e `mod`, e atribua à elas `calculator`, passando números
 diferentes para cada chamada.
 */
-// ?
+
+	var sub = calculator(10,2);
+	var mult = calculator(10,2);
+	var div = calculator(10,2);
+	var mod = calculator(10,2);
 
 /*
 Mostre as variáveis acima no `console` (uma chamada de console por variável),
@@ -95,13 +104,21 @@ As suas respostas devem estar abaixo dos `console.log` referentes à cada
 chamada.
 */
 console.log( 'O resultado da subtração é:' );
-// ?
+console.log(sum(function(number1, number2){
+		return number1 + number2;
+	}));
 
 console.log( 'O resultado da multiplicação é:' );
-// ?
+	console.log(mult(function(number1, number2) {
+		return number1 * number2;
+	}));
 
 console.log( 'O resultado da divisão é:' );
-// ?
+	console.log(div(function(number1, number2) {
+		return number1 / number2;
+	}));
 
 console.log( 'O resto da divisão é:' );
-// ?
+console.log(mod(function(number1, number2) {
+		return number1 % number2;
+	}));
