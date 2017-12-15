@@ -66,14 +66,14 @@ array chamado `numbers`. Se o contador for maior que 10, saia do loop.
 Mostre no console os números no array.
 */
 console.log( 'De 0 a 10:' );
-	var arrNumbers = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
-	for (var numbers in arrNumbers) {
-		if (numbers > 10){
+		var numbers = [];
+	for (var i = 0; i < 20; i++) {
+		if (i > 10) {
 			break;
 		}
-		console.log(numbers);
-
+		numbers.push(i);
 	}
+	console.log(numbers);
 
 /*
 Faça outro loop de 0 a 20, que adicione a um array chamado `numbers` (já
@@ -82,12 +82,13 @@ esses. Se o número for ímpar, pular para o próximo número.
 Mostrar no console os números do array.
 */
 console.log( 'Pares de 0 a 20:' );
-	for (var i = 0; i < arrNumbers.length; i++) {
-		if (i % 2 !== 0) {
+	var numbers = [];
+	for (var i = 0; i < 20; i++) {
+		if (i % 2 === 0) {
 			continue;
 		}
-		console.log(i);
+		numbers.push(i);
 	}
-
+	console.log(numbers);
   
 })();
