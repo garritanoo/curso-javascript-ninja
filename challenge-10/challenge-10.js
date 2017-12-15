@@ -1,3 +1,4 @@
+(function () {
 /*
 Crie uma IIFE que envolva todo esse arquivo (inclusive esse comentário),
 e faça a indentação correta.
@@ -9,10 +10,10 @@ deles seja "true", usando os Wrapper Objects como "conversores" nos valores
 das variáveis. Analise o que está sendo impresso no console para saber como
 resolver o problema corretamente.
 */
-var five = '5';
+var five = Number('5');
 console.log( five + ' é número?', typeof five === 'number' );
-
-var concat = 10 + 10;
+  
+var concat = String(10 + 10);
 console.log( '"' + concat + '" é uma string? E é igual a "1010"?', typeof concat === 'string' );
 
 /*
@@ -24,7 +25,23 @@ funcional, mas dessa vez, separando algumas responsabilidades.
 função receberá dois parâmetros e retornará a operação referente à sua
 propriedade, usando os valores passados por parâmetro.
 */
-// ?
+var operation = {
+	'+': function sum(num1, num2) {
+		return num1 + num2;
+	},
+	'-': function sub(num1, num2) {
+		return num1 - num2;
+	},
+	'*': function mult(num1, num2) {
+		return num1 * num2;
+	},
+	'/': function div(num1, num2) {
+		return num1 / num2;
+	},
+	'%': function mod(num1, num2) {
+		return num1 % num2;
+	}
+};
 
 /*
 Crie uma função chamada `isOperatorValid`, que receberá um operador por
@@ -111,3 +128,6 @@ Repita o PASSO 2 novamente, mas passando um operador inválido, para ver se
 a mensagem de erro será mostrada no console.
 */
 // ?
+  
+  
+})();
