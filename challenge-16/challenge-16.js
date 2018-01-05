@@ -20,7 +20,7 @@ var name = 'Juarez';
 for (var i = 0, len = name.length; i < len; i++) {
 	console.log(name[i] + ' é a ' + (i + 1) + 'ª letra do meu nome.');
 }
-
+ 
 /*
 - Declare uma variável chamada `fullName`, que receba seu nome completo,
 escrito no formato de slug (caixa baixa e palavras separadas por um traço).
@@ -69,7 +69,7 @@ console.log('Roberto'.replace('to', 'ta'));
 
 /*
 Mostre no console a parte "nando" da string "Fernando". Use o método que
-faz a busca do final para o início da string. 
+faz a busca do final para o início da string.
 */
 console.log( '\nParte de uma string:' );
 console.log('Fernando'.substring(8,3));
